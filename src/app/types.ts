@@ -28,10 +28,10 @@ export interface Options {
 }
  export interface Products{
     items:Product[];
-    total:Number;
-    page:Number;
-    perPage:Number;
-    totalPages:Number
+    total:number;
+    page:number;
+    perPage:number;
+    totalPages:number
 
  }
  export interface Product{
