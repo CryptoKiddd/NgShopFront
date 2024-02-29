@@ -38,7 +38,8 @@ export interface Options {
     price:string;
     name:string;
     image:string;
-    rating:Number;
+    rating:number;
+    id?:number
  }
 export interface PaginationParams {
   [param: string]:
