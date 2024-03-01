@@ -23,6 +23,7 @@ export class HomeComponent {
   rows:number = 5
   displayEditPopup:boolean = false
   displayAddPopup:boolean=false
+  
   selectedProduct:Product = {
     price:'',
     name:'',

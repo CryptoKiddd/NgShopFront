@@ -13,11 +13,13 @@ import { RatingModule } from 'primeng/rating';
 })
 export class EditPopupComponent {
   @Input() display:boolean = false;
+  @Output() displayChange = new EventEmitter<boolean>();
+  
   @Input() header!:string;
   @Output() confirm = new EventEmitter<Product>() 
   @Output() cancel = new EventEmitter<void>() 
 
-  product:Product = {
+  @Input() product:Product = {
     name:'',
     image:'',
     price:'',
