@@ -5,11 +5,12 @@ import { ProductComponent } from '../components/product/product.component';
 import { PaginatorModule } from 'primeng/paginator';
 import { CommonModule } from '@angular/common';
 import { EditPopupComponent } from '../components/edit-popup/edit-popup.component';
+import { ButtonModule } from 'primeng/button';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [ProductComponent,CommonModule,PaginatorModule,EditPopupComponent],
+  imports: [ProductComponent,CommonModule,PaginatorModule,EditPopupComponent,ButtonModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
@@ -20,10 +21,10 @@ export class HomeComponent {
    
   products:Product[]= [];
   totalRecords:number = 0
-  rows:number = 5
+  rows:number = 10
   displayEditPopup:boolean = false
   displayAddPopup:boolean=false
-  
+
   selectedProduct:Product = {
     price:'',
     name:'',

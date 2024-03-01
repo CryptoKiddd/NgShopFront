@@ -14,20 +14,24 @@
     >
     
     </p-rating>
-    <div class="row">
+    <div class="row gap-05">
         <button
         type="button"
         pButton
-        icon="pi pi-check"
+        icon="pi pi-pencil"
         (click)="editProduct()"
         label="Edit"
+        class="p-1 gap-05 fs-s"
       ></button>
       <button
       type="button"
       pButton
-      icon="pi pi-check"
-      (click)="deleteProduct()"
+      icon="pi pi-trash"
+      (click)="confirmDelete()"
       label="Delete"
+      #deleteButton
+      class="p-button-danger p-1 gap-05 fs-s "
     ></button>
     </div>
 </div>
+<p-confirmPopup></p-confirmPopup>
