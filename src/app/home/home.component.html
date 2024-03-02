@@ -18,7 +18,7 @@
 
   <p-paginator
     (onPageChange)="onPageChange($event)"
-    
+    #paginator
     [rows]="rows"
     [totalRecords]="totalRecords"
     [rowsPerPageOptions]="[5,10,20]"
@@ -28,6 +28,7 @@
   [product]="selectedProduct"
   [(display)]="displayEditPopup"
   (confirm)="onConfirmEdit($event)"
+ 
   header="Edit Product"
   >
 
