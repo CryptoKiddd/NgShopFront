@@ -77,7 +77,7 @@ onConfirmAdd(product:Product){
 
 
   fetchProducts(page:number, perPage:number){
-    this.productsService.getProducts('http://localhost:3000/clothes', { page: page, perPage: perPage})
+    this.productsService.getProducts('https://main--shopcommercebackend.netlify.app/clothes', { page: page, perPage: perPage})
     .subscribe((products:Products)=>{
       this.products=products.items;
       this.totalRecords = products.total
@@ -101,7 +101,7 @@ onConfirmAdd(product:Product){
 
 
 addProduct(product:Product){
-  this.productsService.addProduct(`http://localhost:3000/clothes`,product).subscribe(
+  this.productsService.addProduct(`https://main--shopcommercebackend.netlify.app/clothes`,product).subscribe(
     {
       next:(data)=>console.log(data),
       error:(error)=>console.log(error)
@@ -111,7 +111,7 @@ addProduct(product:Product){
 }
 
 deleteProduct(product:Product,id:number){
-  this.productsService.deleteProduct(`http://localhost:3000/clothes/${id}`,product).subscribe(
+  this.productsService.deleteProduct(`https://main--shopcommercebackend.netlify.app/clothes/${id}`,product).subscribe(
     {
       next:()=>{
         this.fetchProducts(0,this.rows);
@@ -124,7 +124,7 @@ deleteProduct(product:Product,id:number){
 }
 
 editProduct(product:Product,id:number){
-  this.productsService.editProduct(`http://localhost:3000/clothes/${id}`,product).subscribe(
+  this.productsService.editProduct(`https://main--shopcommercebackend.netlify.app/clothes/${id}`,product).subscribe(
     {
       next:()=>{
         this.fetchProducts(0,this.rows);
